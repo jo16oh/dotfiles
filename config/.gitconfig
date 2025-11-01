@@ -1,0 +1,9 @@
+[user]
+	signingkey = /Users/jo16oh/.ssh/git_signing_key.pub
+	email = jo16oh@gmail.com
+	name = Joichiro Hayashi
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+
