@@ -38,6 +38,9 @@ bind p fish_clipboard_paste
 # set command color in prompt
 set -x fish_color_command blue
 
+# set config path for lazygit
+set -x LG_CONFIG_FILE ~/.config/lazygit/config.yml
+
 # aliases
 alias vi='nvim'
 alias rm='trash'

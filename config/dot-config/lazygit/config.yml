@@ -3,3 +3,5 @@ keybinding:
     findBaseCommitForFixup: <c-a>
   main:
     findBaseCommitForFixup: <c-a>
+git:
+  overrideGpg: true
