@@ -1,0 +1,142 @@
+# introduce new language server
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 100  # set max completion results len for each group: words, snippets, unicode-input
+feature_words = true  # enable completion by word
+feature_snippets = true  # enable snippets
+snippets_first = true  # completions will return before snippets by default
+snippets_inline_by_word_tail = false  # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false  # enable "unicode input"
+feature_paths = false  # enable path completion
+feature_citations = false  # enable citation completion (only on `citation` feature enabled)
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+config.deno.enable = true
+required-root-patterns = ["deno.*"]
+
+[language-server.typescript-language-server]
+required-root-patterns = ["package.json"]
+
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+required-root-patterns = ["biome.json", "biome.jsonc"]
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
+required-root-patterns = ["eslint.config.*", ".eslintrc*"]
+
+[language-server.stylelint]
+command = "stylelint-lsp"
+args = ["--stdio"]
+config.stylelintplus = { autoFixOnSave = true, autoFixOnFormat = true }
+
+[language-server.css-variable-ls]
+command = "cssvar"
+args = ["--stdio"]
+settings = { cssVariables = { lookUpFiles = ["**/*.css"] } }
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+cargo.features = "all"
+
+[[language]]
+name = "html"
+language-servers = ["scls", "vscode-html-language-server", "emmet-ls"]
+
+[[language]]
+name = "typescript"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "deno-lsp",
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "javascript"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "deno-lsp",
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "tsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "deno-lsp",
+  "biome",
+  "emmet-lsp",
+]
+auto-format = true
+
+[[language]]
+name = "jsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "deno-lsp",
+  "biome",
+  "emmet-lsp",
+]
+auto-format = true
+
+[[language]]
+name = "html"
+auto-format = true
+language-servers = ["scls", "vscode-json-language-server", "emmet-lsp"]
+
+[[language]]
+name = "css"
+language-servers = [
+  "scls",
+  "stylelint",
+  "css-variable-ls",
+  "vscode-css-language-server",
+  "emmet-lsp",
+]
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = ["scls", "vscode-json-language-server"]
+auto-format = true
+
+[[language]]
+name = "sql"
+auto-format = true
+language-servers = ["scls"]
+formatter = { command = "sql-formatter" }
+
+[[language]]
+name = "rust"
+language-servers = ["scls", "rust-analyzer"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+
+[[language]]
+name = "toml"
+language-servers = ["scls", "tombi"]
+auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = ["scls"]

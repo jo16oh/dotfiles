@@ -1,0 +1,69 @@
+theme = "everforest_dark"
+
+[editor]
+line-number = "relative"
+auto-format = true
+bufferline = "always"
+end-of-line-diagnostics = "hint"
+mouse = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+
+[editor.indent-guides]
+render = true
+character = "▏"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[keys.insert]
+"C-." = "indent"
+"C-," = "unindent"
+
+[keys.select]
+"C-." = "indent"
+"C-," = "unindent"
+g = { j = "extend_to_file_end", k = "extend_to_file_start" }
+
+[keys.normal]
+"C-." = "indent"
+"C-," = "unindent"
+C-r = "redo"
+S-u = "no_op"
+"'" = "extend_to_line_end"
+C-k = "page_cursor_half_up"
+C-j = "page_cursor_half_down"
+C-q = ":buffer-close"
+X = "extend_line_up"
+A-w = "move_next_sub_word_start"
+A-e = "move_next_sub_word_end"
+A-b = "move_prev_sub_word_start"
+g = { j = "goto_file_end", k = "goto_file_start" }
+# backspace = "goto_previous_buffer"
+# C-l = "goto_next_buffer"
+
+[keys.normal.space]
+# Open file explorer
+e = [
+  ":sh rm -f /tmp/unique-file",
+  ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file",
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ":open %sh{cat /tmp/unique-file}",
+  ":redraw",
+]
+# Open file explorer at current working directory
+S-e = [
+  ":sh rm -f /tmp/unique-file",
+  ":insert-output yazi --chooser-file=/tmp/unique-file",
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ":open %sh{cat /tmp/unique-file}",
+  ":redraw",
+]
+"." = ":toggle-option file-picker.hidden"

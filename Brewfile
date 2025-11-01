@@ -1,0 +1,50 @@
+brew "fish"
+brew "starship"
+brew "deno"
+brew "helix"
+brew "lazygit"
+brew "mas"
+brew "gh"
+brew "ripgrep"
+brew "stow"
+brew "trash-cli"
+brew "watchexec"
+brew "yazi"
+cask "adobe-creative-cloud"
+cask "battery"
+cask "betterdisplay"
+cask "bitwarden"
+cask "discord"
+cask "figma"
+cask "firefox"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-udev-gothic-nf"
+cask "ghostty"
+cask "google-chrome"
+cask "hiddenbar"
+cask "iina"
+cask "karabiner-elements"
+cask "keka"
+cask "logseq"
+cask "microsoft-auto-update"
+cask "microsoft-excel"
+cask "microsoft-powerpoint"
+cask "microsoft-word"
+cask "obsidian"
+cask "raycast"
+cask "scroll-reverser"
+cask "the-unarchiver"
+cask "visual-studio-code"
+cask "workflowy"
+cask "zed"
+cask "zen"
+cask "zoom"
+mas "Bear", id: 1091189122
+mas "Bitwarden", id: 1352778147
+mas "CotEditor", id: 1024640650
+mas "Ethernet Status", id: 1186187538
+mas "Hidden Bar", id: 1452453066
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "辞書 by 物書堂", id: 1380563956
