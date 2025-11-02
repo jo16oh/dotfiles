@@ -1,4 +1,4 @@
-# set homebrew path 
+# Set homebrew path 
 if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)
 end
@@ -35,13 +35,13 @@ bind yy fish_clipboard_copy
 bind Y fish_clipboard_copy
 bind p fish_clipboard_paste
 
-# set command color in prompt
+# Set command color in prompt
 set -x fish_color_command blue
 
-# set config path for lazygit
+# Set config path for lazygit
 set -x LG_CONFIG_FILE ~/.config/lazygit/config.yml
 
-# aliases
+# Aliases
 alias vi='nvim'
 alias rm='trash'
 alias lg='lazygit'

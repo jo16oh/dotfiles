@@ -31,8 +31,8 @@ args = ["lsp-proxy"]
 required-root-patterns = ["biome.json", "biome.jsonc"]
 
 [language-server.eslint]
-args = ["--stdio"]
 command = "vscode-eslint-language-server"
+args = ["--stdio"]
 required-root-patterns = ["eslint.config.*", ".eslintrc*"]
 
 [language-server.stylelint]
