@@ -140,3 +140,8 @@ auto-format = true
 [[language]]
 name = "markdown"
 language-servers = ["scls"]
+
+[[language]]
+name = "fish"
+formatter = { command = "fish_indent" }
+auto-format = true
