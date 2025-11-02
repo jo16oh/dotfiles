@@ -3,15 +3,6 @@ if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
-# Set default node version
-set -U nvm_default_version lts
-
-# Set pnpm path
-set -gx PNPM_HOME /Users/jo16oh/Library/pnpm
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
-end
-
 # Vi-style bindings that inherit emacs-style bindings in all modes
 function fish_hybrid_key_bindings
     for mode in default insert visual

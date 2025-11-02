@@ -1,0 +1,23 @@
+[tools]
+rust = "latest"
+node = "lts"
+deno = "latest"
+npm = "latest"
+pnpm = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@anthropic-ai/sandbox-runtime" = "latest"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+"npm:@olrtg/emmet-language-server" = "latest"
+"npm:css-variable-ls" = "latest"
+"npm:stylelint-lsp" = "latest"
+"npm:tombi" = "latest"
+"cargo:bacon" = "latest"
+"cargo:cargo-expand" = "latest"
+"cargo:cargo-make" = "latest"
+"cargo:cargo-nextest" = "latest"
+"cargo:cargo-sweep" = "latest"
+
+[settings]
+lockfile = true

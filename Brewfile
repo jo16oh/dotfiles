@@ -1,6 +1,6 @@
 brew "fish"
 brew "starship"
-brew "deno"
+brew "mise"
 brew "helix"
 brew "lazygit"
 brew "mas"
