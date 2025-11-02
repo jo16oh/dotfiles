@@ -26,8 +26,8 @@ command = "emmet-language-server"
 args = ["--stdio"]
 
 [language-server.biome]
-command = "biome"
-args = ["lsp-proxy"]
+command = "pnpm"
+args = ["biome", "lsp-proxy"]
 required-root-patterns = ["biome.json", "biome.jsonc"]
 
 [language-server.eslint]
