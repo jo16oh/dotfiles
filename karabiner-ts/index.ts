@@ -159,22 +159,6 @@ writeToProfile("karabiner-ts", [
       map("p").to("k", "⌥⌃"),
     ]),
 
-  layer("tab")
-    .description("numbers")
-    .manipulators([
-      map("japanese_kana", "?any").to(0),
-      map("n", "?any").to(0),
-      map("m", "?any").to(1),
-      map(",", "?any").to(2),
-      map(".", "?any").to(3),
-      map("j", "?any").to(4),
-      map("k", "?any").to(5),
-      map("l", "?any").to(6),
-      map("u", "?any").to(7),
-      map("i", "?any").to(8),
-      map("o", "?any").to(9),
-    ]),
-
   duoLayer("d", "f").description("numbers")
     .manipulators([
       map("japanese_kana", "?any").to(0),
