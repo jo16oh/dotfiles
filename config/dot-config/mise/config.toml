@@ -19,6 +19,9 @@ pnpm = "latest"
 "cargo:cargo-nextest" = "latest"
 "cargo:cargo-sweep" = "latest"
 "cargo:https://github.com/estin/simple-completion-language-server" = "latest"
+"cargo:typst-cli" = "latest"
+"cargo:https://github.com/itsjunetime/tdf.git" = "latest"
+"github:Myriad-Dreamin/tinymist" = "latest"
 
 [settings]
 lockfile = true

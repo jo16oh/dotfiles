@@ -49,6 +49,10 @@ settings = { cssVariables = { lookUpFiles = ["**/*.css"] } }
 check.command = "clippy"
 cargo.features = "all"
 
+[language-server.tinymist]
+command = "tinymist"
+config.formatterMode = "typstyle"
+
 [[language]]
 name = "html"
 language-servers = ["scls", "vscode-html-language-server", "emmet-ls"]
@@ -144,4 +148,9 @@ language-servers = ["scls"]
 [[language]]
 name = "fish"
 formatter = { command = "fish_indent" }
+auto-format = true
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
 auto-format = true
