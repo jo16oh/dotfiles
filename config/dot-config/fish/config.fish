@@ -33,7 +33,6 @@ set -x fish_color_command blue
 set -x LG_CONFIG_FILE ~/.config/lazygit/config.yml
 
 # Aliases
-alias vi='nvim'
 alias rm='trash'
 alias lg='lazygit'
 
