@@ -1,5 +1,7 @@
 font-size = 18
 font-feature = -dlig
+font-family = UDEV Gothic 35NFLG
+adjust-cell-height = 10%
 window-save-state = always
 theme = everforest-dark-medium-gogh
 bold-is-bright = true
