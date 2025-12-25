@@ -1,0 +1,12 @@
+{
+  "name": "karabiner-ts",
+  "scripts": {
+    "build": "tsx index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3",
+    "karabiner.ts": "^1.36.0"
+  }
+}

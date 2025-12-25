@@ -1,5 +1,5 @@
 import {
-  DeviceIdentifier,
+  type DeviceIdentifier,
   duoLayer,
   ifDevice,
   ifKeyboardType,
@@ -7,7 +7,7 @@ import {
   map,
   rule,
   writeToProfile,
-} from "karabiner-ts";
+} from "karabiner.ts";
 
 const MXKEYS_USB: DeviceIdentifier = { vendor_id: 1133, product_id: 50504 };
 const MXKEYS_BLT: DeviceIdentifier = { vendor_id: 1133, product_id: 45929 };
