@@ -22,6 +22,7 @@ pnpm = "latest"
 "cargo:typst-cli" = "latest"
 "cargo:https://github.com/itsjunetime/tdf.git" = "latest"
 "github:Myriad-Dreamin/tinymist" = "latest"
+"npm:@antfu/ni" = "latest"
 
 [settings]
 lockfile = true
