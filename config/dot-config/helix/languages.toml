@@ -45,6 +45,11 @@ command = "cssvar"
 args = ["--stdio"]
 settings = { cssVariables = { lookUpFiles = ["**/*.css"] } }
 
+[language-server.some-sass-language-server]
+command = "some-sass-language-server"
+args = ["--stdio"]
+config = { somesass = { workspace = { loadPaths = [] }, scss.completion.suggestFromUseOnly = true } }
+
 [language-server.rust-analyzer.config]
 check.command = "clippy"
 cargo.features = "all"
@@ -115,6 +120,15 @@ language-servers = [
   "stylelint",
   "css-variable-ls",
   "vscode-css-language-server",
+  "emmet-lsp",
+]
+auto-format = true
+
+[[language]]
+name = "scss"
+language-servers = [
+  "stylelint",
+  "some-sass-language-server",
   "emmet-lsp",
 ]
 auto-format = true
