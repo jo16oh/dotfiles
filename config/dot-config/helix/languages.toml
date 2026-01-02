@@ -58,6 +58,10 @@ cargo.features = "all"
 command = "tinymist"
 config.formatterMode = "typstyle"
 
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+config = { diagnostics = true, formatting = false }
+
 [[language]]
 name = "html"
 language-servers = ["scls", "vscode-html-language-server", "emmet-ls"]
@@ -167,4 +171,17 @@ auto-format = true
 [[language]]
 name = "typst"
 language-servers = ["tinymist"]
+auto-format = true
+
+[[language]]
+name = "ruby"
+language-servers = ["ruby-lsp"]
+formatter = { command = "rubocop", args = [
+  "--stdin",
+  "foo.rb",
+  "-a",
+  "--stderr",
+  "--fail-level",
+  "fatal"
+] }
 auto-format = true

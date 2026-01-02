@@ -24,6 +24,9 @@ pnpm = "latest"
 "github:Myriad-Dreamin/tinymist" = "latest"
 go = "latest"
 "go:github.com/mattn/efm-langserver" = "latest"
+ruby = "latest"
+"gem:ruby-lsp" = "latest"
+"gem:rubocop" = "latest"
 "npm:@antfu/ni" = "latest"
 
 [settings]
