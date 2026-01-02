@@ -12,6 +12,9 @@ feature_unicode_input = false  # enable "unicode input"
 feature_paths = false  # enable path completion
 feature_citations = false  # enable citation completion (only on `citation` feature enabled)
 
+[language-server.efm]
+command = "efm-langserver"
+
 [language-server.deno-lsp]
 command = "deno"
 args = ["lsp"]
@@ -26,7 +29,7 @@ command = "emmet-language-server"
 args = ["--stdio"]
 
 [language-server.biome]
-command = "pnpm"
+command = "ne"
 args = ["biome", "lsp-proxy"]
 required-root-patterns = ["biome.json", "biome.jsonc"]
 
@@ -64,7 +67,13 @@ config = { diagnostics = true, formatting = false }
 
 [[language]]
 name = "html"
-language-servers = ["scls", "vscode-html-language-server", "emmet-ls"]
+language-servers = [
+  "scls",
+  "efm",
+  "vscode-html-language-server",
+  "emmet-ls",
+  { name = "biome", except-features = ["format"] }
+]
 
 [[language]]
 name = "typescript"
@@ -73,7 +82,8 @@ language-servers = [
   "scls",
   { name = "typescript-language-server", except-features = ["format"] },
   "deno-lsp",
-  "biome",
+  "efm",
+  { name = "biome", except-features = ["format"] }
 ]
 auto-format = true
 
@@ -84,7 +94,8 @@ language-servers = [
   "scls",
   { name = "typescript-language-server", except-features = ["format"] },
   "deno-lsp",
-  "biome",
+  "efm",
+  { name = "biome", except-features = ["format"] }
 ]
 auto-format = true
 
@@ -95,7 +106,8 @@ language-servers = [
   "scls",
   { name = "typescript-language-server", except-features = ["format"] },
   "deno-lsp",
-  "biome",
+  "efm",
+  { name = "biome", except-features = ["format"] },
   "emmet-lsp",
 ]
 auto-format = true
@@ -107,7 +119,8 @@ language-servers = [
   "scls",
   { name = "typescript-language-server", except-features = ["format"] },
   "deno-lsp",
-  "biome",
+  "efm",
+  { name = "biome", except-features = ["format"] },
   "emmet-lsp",
 ]
 auto-format = true
@@ -115,14 +128,21 @@ auto-format = true
 [[language]]
 name = "html"
 auto-format = true
-language-servers = ["scls", "vscode-json-language-server", "emmet-lsp"]
+language-servers = [
+  "scls",
+  "efm",
+  "vscode-json-language-server",
+  { name = "biome", except-features = ["format"] },
+  "emmet-lsp"
+]
 
 [[language]]
 name = "css"
 language-servers = [
   "scls",
-  "stylelint",
   "css-variable-ls",
+  "efm",
+  { name = "biome", except-features = ["format"] },
   "vscode-css-language-server",
   "emmet-lsp",
 ]
@@ -131,7 +151,8 @@ auto-format = true
 [[language]]
 name = "scss"
 language-servers = [
-  "stylelint",
+  "scls",
+  "efm",
   "some-sass-language-server",
   "emmet-lsp",
 ]
@@ -139,7 +160,12 @@ auto-format = true
 
 [[language]]
 name = "json"
-language-servers = ["scls", "vscode-json-language-server"]
+language-servers = [
+  "scls",
+  "efm",
+  "vscode-json-language-server",
+  { name = "biome", except-features = ["format"] },
+]
 auto-format = true
 
 [[language]]

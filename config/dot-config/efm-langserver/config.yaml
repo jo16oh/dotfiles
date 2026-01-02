@@ -1,0 +1,41 @@
+version: 2
+tools:
+  stylelint: &stylelint
+    lint-command: 'ne stylelint --formatter compact --stdin --stdin-filename ${INPUT}'
+    lint-stdin: true
+    lint-formats:
+      - '%f: line %l, col %c, %m (%t%*[^ ])'
+    lint-severity: 1
+    format-command: 'ne stylelint --fix --stdin --stdin-filename ${INPUT}'
+    format-stdin: true
+    root-markers:
+      - stylelint.config.js
+      - stylelint.config.cjs
+      - .stylelintrc
+      - .stylelintrc.json
+
+  biome-format: &biome-format
+    format-command: 'ne biome check --no-errors-on-unmatched --files-ignore-unknown=true --write --stdin-file-path ${INPUT}'
+    format-stdin: true
+    root-markers:
+      - biome.json
+      - biome.jsonc
+
+languages:
+  typescript:
+    - <<: *biome-format
+  typescriptreact:
+    - <<: *biome-format
+  javascript:
+    - <<: *biome-format
+  javascriptreact:
+    - <<: *biome-format
+  html:
+    - <<: *biome-format
+  css:
+    - <<: *stylelint
+    - <<: *biome-format
+  scss:
+    - <<: *stylelint
+  json:
+    - <<: *biome-format
