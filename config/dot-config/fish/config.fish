@@ -1,7 +1,10 @@
-# Set homebrew path 
+# Set homebrew path
 if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)
 end
+
+# Add local bin to PATH
+fish_add_path -g ~/.local/bin
 
 # Vi-style bindings that inherit emacs-style bindings in all modes
 function fish_hybrid_key_bindings
