@@ -163,7 +163,17 @@ name = "json"
 language-servers = [
   "scls",
   "efm",
-  "vscode-json-language-server",
+  { name = "vscode-json-language-server", except-features = ["format"] },
+  { name = "biome", except-features = ["format"] },
+]
+auto-format = true
+
+[[language]]
+name = "jsonc"
+language-servers = [
+  "scls",
+  "efm",
+  { name = "vscode-json-language-server", except-features = ["format"] },
   { name = "biome", except-features = ["format"] },
 ]
 auto-format = true

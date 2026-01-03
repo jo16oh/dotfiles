@@ -39,3 +39,5 @@ languages:
     - <<: *stylelint
   json:
     - <<: *biome-format
+  jsonc:
+    - <<: *biome-format
