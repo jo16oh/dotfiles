@@ -1,6 +1,33 @@
 #!/bin/sh
 # Node tool executor agnostic to package managers
 
+# Parse arguments to separate package manager options, command, and command arguments
+pm_opts=""
+command=""
+cmd_args=""
+found_command=false
+
+for arg in "$@"; do
+    if [ "$found_command" = true ]; then
+        # After command: these are command arguments
+        cmd_args="$cmd_args $arg"
+    elif [ "${arg#-}" = "$arg" ]; then
+        # First non-option argument is the command
+        command="$arg"
+        found_command=true
+    else
+        # Before command: these are package manager options
+        pm_opts="$pm_opts $arg"
+    fi
+done
+
+# If no command found, exit with error
+if [ -z "$command" ]; then
+    echo "Error: No command specified." >&2
+    echo "Usage: ne [options] <command> [args...]" >&2
+    exit 1
+fi
+
 current_dir="$(pwd)"
 
 while [ "$current_dir" != "/" ]; do
@@ -11,16 +38,16 @@ while [ "$current_dir" != "/" ]; do
         exit 1
     # Check for pnpm
     elif [ -f "$current_dir/pnpm-lock.yaml" ]; then
-        exec pnpm exec "$@"
+        exec pnpm $pm_opts exec -- $command $cmd_args
     # Check for bun
     elif [ -f "$current_dir/bun.lockb" ] || [ -f "$current_dir/bun.lock" ]; then
-        exec bun x --no-install "$@"
+        exec bun $pm_opts x --no-install -- $command $cmd_args
     # Check for yarn
     elif [ -f "$current_dir/yarn.lock" ]; then
-        exec yarn exec "$@"
+        exec yarn $pm_opts exec -- $command $cmd_args
     # Check for npm
     elif [ -f "$current_dir/package-lock.json" ]; then
-        exec npm exec --no-install -- "$@"
+        exec npm $pm_opts exec --no-install -- $command $cmd_args
     fi
 
     current_dir="$(dirname "$current_dir")"
