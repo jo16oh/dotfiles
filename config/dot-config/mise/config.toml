@@ -28,6 +28,7 @@ ruby = "latest"
 "gem:ruby-lsp" = "latest"
 "gem:rubocop" = "latest"
 "npm:@antfu/ni" = "latest"
+"npm:react-devtools" = "latest"
 
 [settings]
 lockfile = true
