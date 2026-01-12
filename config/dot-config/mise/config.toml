@@ -1,6 +1,6 @@
 [tools]
 rust = "latest"
-node = "latest"
+node = "lts"
 deno = "latest"
 npm = "latest"
 pnpm = "latest"
