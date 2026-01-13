@@ -29,6 +29,9 @@ bind yy fish_clipboard_copy
 bind Y fish_clipboard_copy
 bind p fish_clipboard_paste
 
+# Set path for ghq
+set -gx GHQ_ROOT "$HOME/dev"
+
 # Set command color in prompt
 set -x fish_color_command blue
 

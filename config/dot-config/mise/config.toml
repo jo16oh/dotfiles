@@ -29,6 +29,8 @@ ruby = "latest"
 "gem:rubocop" = "latest"
 "npm:@antfu/ni" = "latest"
 "npm:react-devtools" = "latest"
+fzf = "latest"
+ghq = "latest"
 
 [settings]
 lockfile = true
