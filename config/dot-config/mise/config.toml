@@ -31,6 +31,7 @@ ruby = "latest"
 "npm:react-devtools" = "latest"
 fzf = "latest"
 ghq = "latest"
+"go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
 
 [settings]
 lockfile = true
