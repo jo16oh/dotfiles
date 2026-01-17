@@ -19,9 +19,12 @@ cask 'figma'
 cask 'firefox'
 cask 'font-jetbrains-mono-nerd-font'
 cask 'font-udev-gothic-nf'
+cask "font-hackgen-nerd"
+cask "font-source-sans-3"
 cask 'font-harano-aji'
 cask 'font-noto-sans-jp'
 cask 'font-noto-serif-jp'
+cask "font-biz-udgothic"
 cask 'ghostty'
 cask 'google-chrome'
 cask 'hiddenbar'
