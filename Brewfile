@@ -1,15 +1,16 @@
 brew 'fish'
-brew 'starship'
 brew 'mise'
-brew 'helix'
-brew 'lazygit'
-brew 'mas'
-brew 'gh'
-brew 'ripgrep'
 brew 'stow'
+brew 'mas'
 brew 'trash-cli'
-brew 'watchexec'
-brew 'yazi'
+
+# ruby build dependencies
+brew 'openssl@3'
+brew 'readline'
+brew 'libyaml'
+brew 'gmp'
+brew 'autoconf'
+
 cask 'adobe-creative-cloud'
 cask 'battery'
 cask 'betterdisplay'
@@ -45,6 +46,7 @@ cask 'workflowy'
 cask 'zed'
 cask 'zen'
 cask 'zoom'
+
 mas 'Bear', id: 1_091_189_122
 mas 'Bitwarden', id: 1_352_778_147
 mas 'CotEditor', id: 1_024_640_650
@@ -54,10 +56,3 @@ mas 'Keynote', id: 409_183_694
 mas 'LINE', id: 539_883_307
 mas 'Magnet', id: 441_258_766
 mas '辞書 by 物書堂', id: 1_380_563_956
-
-# to build ruby
-brew 'openssl@3'
-brew 'readline'
-brew 'libyaml'
-brew 'gmp'
-brew 'autoconf'

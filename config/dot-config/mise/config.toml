@@ -32,6 +32,13 @@ ruby = "latest"
 fzf = "latest"
 ghq = "latest"
 "go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
+starship = "latest"
+helix = "latest"
+yazi = "latest"
+lazygit = "latest"
+gh = "latest"
+ripgrep = "latest"
+watchexec = "latest"
 
 [settings]
 lockfile = true
