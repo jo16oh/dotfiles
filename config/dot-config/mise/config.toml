@@ -39,6 +39,7 @@ lazygit = "latest"
 gh = "latest"
 ripgrep = "latest"
 watchexec = "latest"
+"cargo:rip2" = "latest"
 
 [settings]
 lockfile = true

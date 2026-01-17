@@ -39,7 +39,7 @@ set -x fish_color_command blue
 set -x LG_CONFIG_FILE ~/.config/lazygit/config.yml
 
 # Aliases
-alias rm='trash'
+alias rm="echo use 'rip' instead of rm"
 alias lg='lazygit'
 
 # Init starship
