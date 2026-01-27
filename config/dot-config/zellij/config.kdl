@@ -1,0 +1,32 @@
+default_mode "locked"
+// default_layout "compact"
+// simplified_ui true
+theme "everforest-dark"
+
+keybinds {
+	unbind "Ctrl g"
+	unbind "Ctrl t"
+	locked {
+		bind "Ctrl t" { SwitchToMode "normal"; } 
+	}
+	normal {
+		unbind "Ctrl p"
+		unbind "Ctrl n"
+		unbind "Ctrl t"
+		unbind "Ctrl h"
+		unbind "Ctrl s"
+		unbind "Ctrl o"
+		unbind "Ctrl q"
+		bind "Esc" { SwitchToMode "locked"; }
+		bind "p" { SwitchToMode "pane"; }
+		bind "n" { SwitchToMode "resize"; }
+		bind "t" { SwitchToMode "tab"; }
+		bind "h" { SwitchToMode "move"; }
+		bind "s" { SwitchToMode "search"; }
+		bind "o" { SwitchToMode "session"; }
+		bind "q" { Quit; }
+	}
+}
+
+
+

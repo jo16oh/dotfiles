@@ -41,6 +41,7 @@ gh = "latest"
 ripgrep = "latest"
 watchexec = "latest"
 "cargo:rip2" = "latest"
+zellij = "latest"
 
 [settings]
 lockfile = true
