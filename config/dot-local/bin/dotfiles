@@ -1,0 +1,31 @@
+#!/bin/sh
+
+USAGE="Usage: dotfiles [upgrade | apply | dev]"
+
+if [ $# -lt 1 ]; then
+    echo "$USAGE"
+    exit 1
+fi
+
+COMMAND=$1
+
+case "$COMMAND" in
+    "upgrade")
+        brew upgrade
+        mise upgrade
+        ;;
+
+    "apply")
+        stow -v -R --dotfiles -t ~ config
+        ;;
+
+    "dev")
+        watchexec "$0 apply"
+        ;;
+
+    *)
+        echo "Error: Unknown command '$COMMAND'"
+        echo "$USAGE"
+        exit 1
+        ;;
+esac
