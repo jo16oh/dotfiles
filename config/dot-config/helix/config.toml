@@ -71,3 +71,4 @@ S-e = [
   ":redraw",
 ]
 "." = ":toggle-option file-picker.hidden"
+r = { r = ":reload", a = ":reload-all", c = ":config-reload" }
