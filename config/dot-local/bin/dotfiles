@@ -1,6 +1,6 @@
 #!/bin/sh
 
-USAGE="Usage: dotfiles [upgrade | apply | dev]"
+USAGE="Usage: dotfiles [install | upgrade | apply | dev]"
 
 if [ $# -lt 1 ]; then
     echo "$USAGE"
@@ -12,6 +12,11 @@ COMMAND=$1
 dotfiles_repo_dir=$(git -C "$(dirname "$(realpath "$0")")" rev-parse --show-toplevel)
 
 case "$COMMAND" in
+    "install")
+        brew bundle install --file="${dotfiles_repo_dir}/Brewfile"
+        mise install
+        ;;
+    
     "upgrade")
         brew upgrade
         mise upgrade
