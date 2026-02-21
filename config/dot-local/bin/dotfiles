@@ -16,6 +16,8 @@ case "$COMMAND" in
         ;;
 
     "apply")
+        cd $(dirname $(realpath "$0"))
+        cd $(git rev-parse --show-toplevel)
         stow -v -R --dotfiles -t ~ config
         ;;
 
