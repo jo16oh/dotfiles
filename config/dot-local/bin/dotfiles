@@ -9,6 +9,8 @@ fi
 
 COMMAND=$1
 
+dotfiles_repo_dir=$(git -C "$(dirname "$(realpath "$0")")" rev-parse --show-toplevel)
+
 case "$COMMAND" in
     "upgrade")
         brew upgrade
@@ -16,13 +18,11 @@ case "$COMMAND" in
         ;;
 
     "apply")
-        cd $(dirname $(realpath "$0"))
-        cd $(git rev-parse --show-toplevel)
-        stow -v -R --dotfiles -t ~ config
+        stow -v --restow --dotfiles --dir="$dotfiles_repo_dir" --target=$(echo ~) config
         ;;
 
     "dev")
-        watchexec "$0 apply"
+        watchexec --watch "$dotfiles_repo_dir" "$0 apply"
         ;;
 
     *)
