@@ -1,6 +1,6 @@
 #!/bin/sh
 
-USAGE="Usage: dotfiles [install | upgrade | apply | dev]"
+USAGE="Usage: dotfiles [install | upgrade | apply | dev | prune]"
 
 if [ $# -lt 1 ]; then
     echo "$USAGE"
@@ -28,6 +28,11 @@ case "$COMMAND" in
 
     "dev")
         watchexec --watch "$dotfiles_repo_dir" "$0 apply"
+        ;;
+
+    "prune")
+        brew bundle cleanup --force --file="${dotfiles_repo_dir}/Brewfile"
+        mise prune
         ;;
 
     *)
