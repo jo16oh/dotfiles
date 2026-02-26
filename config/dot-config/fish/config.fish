@@ -3,6 +3,9 @@ if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
+# Add local bin to PATH
+fish_add_path -g ~/.local/bin
+
 # Vi-style bindings that inherit emacs-style bindings in all modes
 function fish_hybrid_key_bindings
     for mode in default insert visual
@@ -26,8 +29,18 @@ bind yy fish_clipboard_copy
 bind Y fish_clipboard_copy
 bind p fish_clipboard_paste
 
+# Set path for ghq
+set -gx GHQ_ROOT "$HOME/dev"
+
 # Set command color in prompt
 set -x fish_color_command blue
+
+# Set config path for lazygit
+set -x LG_CONFIG_FILE ~/.config/lazygit/config.yml
+
+# Aliases
+alias rm="echo use 'rip' instead of rm"
+alias lg='lazygit'
 
 # Init starship
 starship init fish | source
