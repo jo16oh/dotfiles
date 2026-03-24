@@ -65,6 +65,15 @@ config.formatterMode = "typstyle"
 command = "ruby-lsp"
 config = { diagnostics = true, formatting = false }
 
+[language-server.svelteserver]
+command = "svelteserver"
+required-root-patterns = [
+  "svelte.config.js",
+  "svelte.config.ts",
+  "svelte.config.mjs",
+  "svelte.config.cjs"
+]
+
 [[language]]
 name = "html"
 language-servers = [
@@ -123,6 +132,19 @@ language-servers = [
   { name = "biome", except-features = ["format"] },
   "emmet-lsp",
 ]
+auto-format = true
+
+[[language]]
+name = "svelte"
+file-types = ["svelte"]
+language-servers = [
+  "scls",
+  { name = "svelteserver", except-features = ["format"] },
+  "efm",
+  "emmet-lsp"
+]
+roots = ["svelte.config.js"]
+scope = "source.svelte"
 auto-format = true
 
 [[language]]

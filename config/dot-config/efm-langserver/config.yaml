@@ -30,6 +30,8 @@ languages:
     - <<: *biome-format
   javascriptreact:
     - <<: *biome-format
+  svelte:
+    - <<: *biome-format
   html:
     - <<: *biome-format
   css:
