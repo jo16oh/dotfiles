@@ -57,3 +57,4 @@ mas 'Keynote', id: 409_183_694
 mas 'LINE', id: 539_883_307
 mas 'Magnet', id: 441_258_766
 mas '辞書 by 物書堂', id: 1_380_563_956
+mas 'Slack for Desktop', id: 803453959
