@@ -2,7 +2,6 @@ brew 'fish'
 brew 'mise'
 brew 'stow'
 brew 'mas'
-brew 'terminal-notifier'
 
 # ruby build dependencies
 brew 'openssl@3'
