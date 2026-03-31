@@ -71,4 +71,5 @@ S-e = [
   ":redraw",
 ]
 "." = ":toggle-option file-picker.hidden"
-r = { r = ":reload", a = ":reload-all", c = ":config-reload" }
+n = "rename_symbol"
+r = { r = ":reload", a = ":reload-all", c = ":config-reload", l = ":lsp-restart" }
