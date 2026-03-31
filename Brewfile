@@ -52,7 +52,6 @@ mas 'Bear', id: 1_091_189_122
 mas 'Bitwarden', id: 1_352_778_147
 mas 'CotEditor', id: 1_024_640_650
 mas 'Ethernet Status', id: 1_186_187_538
-mas 'Hidden Bar', id: 1_452_453_066
 mas 'Keynote', id: 409_183_694
 mas 'LINE', id: 539_883_307
 mas 'Magnet', id: 441_258_766
