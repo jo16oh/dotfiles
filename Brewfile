@@ -2,6 +2,7 @@ brew 'fish'
 brew 'mise'
 brew 'stow'
 brew 'mas'
+brew 'trash'
 
 # ruby build dependencies
 brew 'openssl@3'
