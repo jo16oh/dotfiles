@@ -1,8 +1,21 @@
+brew_prefix = ENV['HOMEBREW_PREFIX']
+
 brew 'fish'
 brew 'mise'
 brew 'stow'
 brew 'mas'
 brew 'trash'
+brew 'smartmontools'
+
+brew 'lima'
+brew 'colima', restart_service: true
+brew 'docker'
+brew 'docker-compose'
+brew 'docker-buildx'
+
+system 'mkdir -p ~/.docker/cli-plugins'
+system "ln -s -f #{brew_prefix}/bin/docker-cli-plugin-docker-compose ~/.docker/cli-plugins/docker-compose"
+system "ln -s -f #{brew_prefix}/bin/docker-cli-plugin-docker-buildx ~/.docker/cli-plugins/docker-buildx"
 
 # ruby build dependencies
 brew 'openssl@3'
@@ -37,6 +50,7 @@ cask 'microsoft-auto-update'
 cask 'microsoft-excel'
 cask 'microsoft-powerpoint'
 cask 'microsoft-word'
+cask 'microsoft-teams'
 cask 'obsidian'
 cask 'raycast'
 cask 'scroll-reverser'
@@ -56,4 +70,5 @@ mas 'Keynote', id: 409_183_694
 mas 'LINE', id: 539_883_307
 mas 'Magnet', id: 441_258_766
 mas '辞書 by 物書堂', id: 1_380_563_956
-mas 'Slack for Desktop', id: 803453959
+mas 'Slack for Desktop', id: 803_453_959
+mas 'Kosshi', id: 6_759_483_880

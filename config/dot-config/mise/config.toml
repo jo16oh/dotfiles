@@ -37,19 +37,10 @@ fd = "latest"
 jq = "latest"
 resvg = "latest"
 lazygit = "latest"
+lazydocker = "latest"
 gh = "latest"
 ripgrep = "latest"
 watchexec = "latest"
-colima = "latest"
-lima = "latest"
-docker-cli = "latest"
-# Run following command after install
-# ln -s -f $(which docker-cli-plugin-docker-compose) ~/.docker/cli-plugins/docker-compose
-docker-compose = "latest"
-# Run following command after install
-# ln -s -f $(which docker-cli-plugin-docker-buildx) ~/.docker/cli-plugins/docker-buildx
-"aqua:docker/buildx" = "latest"
-lazydocker = "latest"
 
 [hooks]
 postinstall = "mise lock -g"
