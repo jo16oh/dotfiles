@@ -38,6 +38,15 @@ command = "vscode-eslint-language-server"
 args = ["--stdio"]
 required-root-patterns = ["eslint.config.*", ".eslintrc*"]
 
+[language-server.oxlint]
+command = "ne"
+args = ["oxlint", "--lsp"]
+required-root-patterns = [
+  ".oxlintrc.json",
+  ".oxlintrc.jsonc",
+  "oxlint.config.ts"
+]
+
 [language-server.stylelint]
 command = "stylelint-lsp"
 args = ["--stdio"]
@@ -92,7 +101,9 @@ language-servers = [
   { name = "typescript-language-server", except-features = ["format"] },
   "deno-lsp",
   "efm",
-  { name = "biome", except-features = ["format"] }
+  { name = "biome", except-features = ["format"] },
+  "eslint",
+  "oxlint",
 ]
 auto-format = true
 
@@ -104,7 +115,9 @@ language-servers = [
   { name = "typescript-language-server", except-features = ["format"] },
   "deno-lsp",
   "efm",
-  { name = "biome", except-features = ["format"] }
+  { name = "biome", except-features = ["format"] },
+  "eslint",
+  "oxlint",
 ]
 auto-format = true
 
@@ -117,6 +130,8 @@ language-servers = [
   "deno-lsp",
   "efm",
   { name = "biome", except-features = ["format"] },
+  "eslint",
+  "oxlint",
   "emmet-lsp",
 ]
 auto-format = true
@@ -130,6 +145,8 @@ language-servers = [
   "deno-lsp",
   "efm",
   { name = "biome", except-features = ["format"] },
+  "eslint",
+  "oxlint",
   "emmet-lsp",
 ]
 auto-format = true
@@ -141,10 +158,12 @@ language-servers = [
   "scls",
   { name = "svelteserver", except-features = ["format"] },
   "efm",
+  { name = "biome", except-features = ["format"] },
+  "eslint",
+  "oxlint",
   "emmet-lsp"
 ]
 roots = ["svelte.config.js"]
-scope = "source.svelte"
 auto-format = true
 
 [[language]]
@@ -218,8 +237,14 @@ language-servers = ["scls", "tombi"]
 auto-format = true
 
 [[language]]
+name = "yaml"
+language-servers = ["scls", "efm"]
+auto-format = true
+
+[[language]]
 name = "markdown"
-language-servers = ["scls"]
+language-servers = ["scls", "efm"]
+auto-format = true
 
 [[language]]
 name = "fish"

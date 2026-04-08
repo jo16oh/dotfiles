@@ -21,25 +21,47 @@ tools:
       - biome.json
       - biome.jsonc
 
+  oxfmt: &oxfmt
+    format-command: 'ne oxfmt --stdin-filepath ${INPUT}'
+    format-stdin: true
+    root-markers:
+      - .oxfmtrc.json
+      - .oxfmtrc.jsonc
+      - oxfmt.config.ts
+
 languages:
   typescript:
     - <<: *biome-format
+    - <<: *oxfmt
   typescriptreact:
     - <<: *biome-format
+    - <<: *oxfmt
   javascript:
     - <<: *biome-format
+    - <<: *oxfmt
   javascriptreact:
     - <<: *biome-format
+    - <<: *oxfmt
   svelte:
     - <<: *biome-format
+    - <<: *oxfmt
   html:
     - <<: *biome-format
+    - <<: *oxfmt
   css:
     - <<: *stylelint
     - <<: *biome-format
+    - <<: *oxfmt
   scss:
     - <<: *stylelint
+    - <<: *oxfmt
   json:
     - <<: *biome-format
+    - <<: *oxfmt
   jsonc:
     - <<: *biome-format
+    - <<: *oxfmt
+  yaml:
+    - <<: *oxfmt
+  markdown:
+    - <<: *oxfmt
