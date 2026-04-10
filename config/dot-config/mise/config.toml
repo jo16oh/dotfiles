@@ -53,3 +53,4 @@ docker-compose = "latest"
 lazydocker = "latest"
 
 [settings]
+install_before = "3d"
