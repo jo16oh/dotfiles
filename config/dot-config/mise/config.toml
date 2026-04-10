@@ -1,5 +1,6 @@
 [tools]
-rust = "latest"
+rust = { version = "latest", profile = "default" }
+rust-analyzer = "latest"
 node = "lts"
 deno = "latest"
 npm = "latest"
