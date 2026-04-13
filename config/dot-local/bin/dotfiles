@@ -12,6 +12,9 @@ COMMAND=$1
 dotfiles_repo_dir=$(git -C "$(dirname "$(realpath "$0")")" rev-parse --show-toplevel)
 
 case "$COMMAND" in
+    "path")
+        echo ${dotfiles_repo_dir}
+        ;;
     "install")
         brew bundle install --file="${dotfiles_repo_dir}/Brewfile"
         mise install

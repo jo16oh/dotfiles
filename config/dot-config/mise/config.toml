@@ -43,7 +43,7 @@ ripgrep = "latest"
 watchexec = "latest"
 
 [hooks]
-postinstall = "mise lock -g"
+postinstall = "cd $(dotfiles path) && mise lock -g"
 
 [settings]
 install_before = "3d"
