@@ -479,14 +479,6 @@ backend = "npm:@anthropic-ai/sandbox-runtime"
 version = "2.8.0"
 backend = "npm:@olrtg/emmet-language-server"
 
-[[tools."npm:css-variable-ls"]]
-version = "0.6.38"
-backend = "npm:css-variable-ls"
-
-[[tools."npm:css-variable-ls"]]
-version = "2.6.2"
-backend = "npm:css-variable-ls"
-
 [[tools."npm:react-devtools"]]
 version = "7.0.1"
 backend = "npm:react-devtools"

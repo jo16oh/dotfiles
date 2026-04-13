@@ -52,11 +52,6 @@ command = "stylelint-lsp"
 args = ["--stdio"]
 config.stylelintplus = { autoFixOnSave = true, autoFixOnFormat = true }
 
-[language-server.css-variable-ls]
-command = "cssvar"
-args = ["--stdio"]
-settings = { cssVariables = { lookUpFiles = ["**/*.css"] } }
-
 [language-server.some-sass-language-server]
 command = "some-sass-language-server"
 args = ["--stdio"]
@@ -181,7 +176,6 @@ language-servers = [
 name = "css"
 language-servers = [
   "scls",
-  "css-variable-ls",
   "efm",
   { name = "biome", except-features = ["format"] },
   "vscode-css-language-server",
