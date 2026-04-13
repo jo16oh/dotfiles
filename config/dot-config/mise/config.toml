@@ -52,5 +52,10 @@ docker-compose = "latest"
 "aqua:docker/buildx" = "latest"
 lazydocker = "latest"
 
+[hooks]
+postinstall = "mise lock -g"
+
 [settings]
 install_before = "3d"
+experimental = true
+lockfile = true
