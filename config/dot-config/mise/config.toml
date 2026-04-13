@@ -1,3 +1,6 @@
+[env]
+HELIX_RUNTIME = "~/dev/github.com/helix-editor/helix/runtime"
+
 [tools]
 rust = { version = "latest", profile = "default" }
 rust-analyzer = "latest"
@@ -31,7 +34,6 @@ fzf = "latest"
 ghq = "latest"
 "go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
 starship = "latest"
-helix = "latest"
 yazi = "latest"
 fd = "latest"
 jq = "latest"
@@ -44,6 +46,16 @@ watchexec = "latest"
 
 [hooks]
 postinstall = "cd $(dotfiles path) && mise lock -g"
+
+[tasks.build_helix]
+run = """
+  cd "$GHQ_ROOT/github.com/helix-editor/helix" || exit
+  cargo install \
+    --profile opt \
+    --config 'build.rustflags="-C target-cpu=native"' \
+    --path helix-term \
+    --locked
+"""
 
 [settings]
 install_before = "3d"
