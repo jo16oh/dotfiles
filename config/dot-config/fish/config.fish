@@ -5,6 +5,13 @@ end
 
 # Add local bin to PATH
 fish_add_path -g ~/.local/bin
+fish_add_path $HOME/.local/share/mise/shims
+
+if status is-interactive
+    if type -q mise
+        mise activate fish | source
+    end
+end
 
 # Vi-style bindings that inherit emacs-style bindings in all modes
 function fish_hybrid_key_bindings
