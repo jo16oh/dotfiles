@@ -58,6 +58,6 @@ run = """
 """
 
 [settings]
-install_before = "3d"
+minimum_release_age = "3d"
 experimental = true
 lockfile = true
