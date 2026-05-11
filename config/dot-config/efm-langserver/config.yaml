@@ -1,4 +1,6 @@
 version: 2
+# log-file: "/tmp/efm.log"
+# log-level: 3
 tools:
   stylelint: &stylelint
     lint-command: 'ne stylelint --formatter compact --stdin --stdin-filename ${INPUT}'
