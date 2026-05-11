@@ -24,6 +24,12 @@ required-root-patterns = ["deno.*"]
 [language-server.typescript-language-server]
 required-root-patterns = ["package.json"]
 
+[[language-server.typescript-language-server.config.plugins]]
+name = "@vue/typescript-plugin"
+# miseのpostinstallフックによって作成された最新のvue-language-serverへのシンボリックリンク
+location = "/Users/jo16oh/.local/share/lsp/vue-language-server"
+languages = ["vue"]
+
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]
@@ -159,6 +165,21 @@ language-servers = [
   "emmet-lsp"
 ]
 roots = ["svelte.config.js"]
+auto-format = true
+
+[[language]]
+name = "vue"
+file-types = ["vue"]
+language-servers = [
+  "scls",
+  "efm",
+  { name = "typescript-language-server", except-features = ["format"] },
+  { name = "biome", except-features = ["format"] },
+  "eslint",
+  "oxlint",
+  "emmet-lsp"
+]
+roots = ["package.json"]
 auto-format = true
 
 [[language]]

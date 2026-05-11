@@ -43,6 +43,8 @@ lazydocker = "latest"
 gh = "latest"
 ripgrep = "latest"
 watchexec = "latest"
+# 最新のvue-language-serverを同じパスで参照できるようにシンボリックリンクを作成
+"npm:@vue/language-server" = { version = "latest", postinstall = "mkdir -p ~/.local/share/lsp && ln -sfn $MISE_TOOL_INSTALL_PATH/lib/node_modules/@vue/language-server ~/.local/share/lsp/vue-language-server" }
 
 [hooks]
 postinstall = "cd $(dotfiles path) && mise lock -g"

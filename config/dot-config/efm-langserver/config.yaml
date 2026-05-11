@@ -46,6 +46,9 @@ languages:
   javascriptreact:
     - <<: *biome-format
     - <<: *oxfmt
+  vue:
+    - <<: *biome-format
+    - <<: *oxfmt
   svelte:
     - <<: *biome-format
     - <<: *oxfmt

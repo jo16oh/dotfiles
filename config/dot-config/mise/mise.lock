@@ -21,26 +21,27 @@ version = "rev:7b9e1462da6d75d65cd1a3f5f263fda1046bed7e"
 backend = "cargo:https://github.com/itsjunetime/tdf.git"
 
 [[tools.claude-code]]
-version = "2.1.126"
+version = "2.1.133"
 backend = "aqua:anthropics/claude-code"
 
 [tools.claude-code."platforms.linux-arm64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.126/linux-arm64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.133/linux-arm64/claude"
 
 [tools.claude-code."platforms.linux-arm64-musl"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.126/linux-arm64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.133/linux-arm64/claude"
 
 [tools.claude-code."platforms.linux-x64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.126/linux-x64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.133/linux-x64/claude"
 
 [tools.claude-code."platforms.linux-x64-musl"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.126/linux-x64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.133/linux-x64/claude"
 
 [tools.claude-code."platforms.macos-arm64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.126/darwin-arm64/claude"
+checksum = "blake3:6d29df78806db59fe1bf6e858281415dd8ed07de03889e257374a789fd2ca2de"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.133/darwin-arm64/claude"
 
 [tools.claude-code."platforms.macos-x64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.126/darwin-x64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.133/darwin-x64/claude"
 
 [[tools.deno]]
 version = "2.7.14"
@@ -214,36 +215,36 @@ checksum = "sha256:a526da44d5f67250598fa95e5654815e9f672b2c05d1d98c28bce0e60d3cf
 url = "https://github.com/x-motemen/ghq/releases/download/v1.10.1/ghq_windows_amd64.zip"
 
 [[tools.go]]
-version = "1.26.2"
+version = "1.26.3"
 backend = "core:go"
 
 [tools.go."platforms.linux-arm64"]
-checksum = "sha256:c958a1fe1b361391db163a485e21f5f228142d6f8b584f6bef89b26f66dc5b23"
-url = "https://dl.google.com/go/go1.26.2.linux-arm64.tar.gz"
+checksum = "sha256:9d89a3ea57d141c2b22d70083f2c8459ba3890f2d9e818e7e933b75614936565"
+url = "https://dl.google.com/go/go1.26.3.linux-arm64.tar.gz"
 
 [tools.go."platforms.linux-arm64-musl"]
-checksum = "sha256:c958a1fe1b361391db163a485e21f5f228142d6f8b584f6bef89b26f66dc5b23"
-url = "https://dl.google.com/go/go1.26.2.linux-arm64.tar.gz"
+checksum = "sha256:9d89a3ea57d141c2b22d70083f2c8459ba3890f2d9e818e7e933b75614936565"
+url = "https://dl.google.com/go/go1.26.3.linux-arm64.tar.gz"
 
 [tools.go."platforms.linux-x64"]
-checksum = "sha256:990e6b4bbba816dc3ee129eaeaf4b42f17c2800b88a2166c265ac1a200262282"
-url = "https://dl.google.com/go/go1.26.2.linux-amd64.tar.gz"
+checksum = "sha256:2b2cfc7148493da5e73981bffbf3353af381d5f93e789c82c79aff64962eb556"
+url = "https://dl.google.com/go/go1.26.3.linux-amd64.tar.gz"
 
 [tools.go."platforms.linux-x64-musl"]
-checksum = "sha256:990e6b4bbba816dc3ee129eaeaf4b42f17c2800b88a2166c265ac1a200262282"
-url = "https://dl.google.com/go/go1.26.2.linux-amd64.tar.gz"
+checksum = "sha256:2b2cfc7148493da5e73981bffbf3353af381d5f93e789c82c79aff64962eb556"
+url = "https://dl.google.com/go/go1.26.3.linux-amd64.tar.gz"
 
 [tools.go."platforms.macos-arm64"]
-checksum = "sha256:32af1522bf3e3ff3975864780a429cc0b41d190ec7bf90faa661d6d64566e7af"
-url = "https://dl.google.com/go/go1.26.2.darwin-arm64.tar.gz"
+checksum = "sha256:875cf54a15311eee2c99b9dd67c68c4a49351d489ab622bf2cfd28c8f2078d3c"
+url = "https://dl.google.com/go/go1.26.3.darwin-arm64.tar.gz"
 
 [tools.go."platforms.macos-x64"]
-checksum = "sha256:bc3f1500d9968c36d705442d90ba91addf9271665033748b82532682e90a7966"
-url = "https://dl.google.com/go/go1.26.2.darwin-amd64.tar.gz"
+checksum = "sha256:278d580b32e299fe4a9c990fcf2d02acfe538c7e551a6ee18f9c7164573d2c63"
+url = "https://dl.google.com/go/go1.26.3.darwin-amd64.tar.gz"
 
 [tools.go."platforms.windows-x64"]
-checksum = "sha256:98eb3570bade15cb826b0909338df6cc6d2cf590bc39c471142002db3832b708"
-url = "https://dl.google.com/go/go1.26.2.windows-amd64.zip"
+checksum = "sha256:20d2ceafb4ed41b96b879010927b28bc92a5be57a7c1801ce365a9ca51d3224a"
+url = "https://dl.google.com/go/go1.26.3.windows-amd64.zip"
 
 [[tools."go:github.com/d-kuro/gwq/cmd/gwq"]]
 version = "0.1.1"
@@ -389,7 +390,7 @@ checksum = "sha256:cc5149eabd53779ce1e7bdc5401643622d0c7e6800ade18928a767e940bb0
 url = "https://nodejs.org/dist/v24.15.0/node-v24.15.0-win-x64.zip"
 
 [[tools.npm]]
-version = "11.13.0"
+version = "11.14.0"
 backend = "npm"
 
 [[tools."npm:@antfu/ni"]]
@@ -397,12 +398,16 @@ version = "30.1.0"
 backend = "npm:@antfu/ni"
 
 [[tools."npm:@anthropic-ai/sandbox-runtime"]]
-version = "0.0.49"
+version = "0.0.50"
 backend = "npm:@anthropic-ai/sandbox-runtime"
 
 [[tools."npm:@olrtg/emmet-language-server"]]
 version = "2.8.0"
 backend = "npm:@olrtg/emmet-language-server"
+
+[[tools."npm:@vue/language-server"]]
+version = "3.2.8"
+backend = "npm:@vue/language-server"
 
 [[tools."npm:react-devtools"]]
 version = "7.0.1"
@@ -425,36 +430,38 @@ version = "4.10.0"
 backend = "npm:vscode-langservers-extracted"
 
 [[tools.pnpm]]
-version = "11.0.4"
+version = "11.0.8"
 backend = "aqua:pnpm/pnpm"
 
 [tools.pnpm."platforms.linux-arm64"]
-checksum = "sha256:77ab05d5db4aec5bf9448a78f8dc60f0c67dca5104412aa192609fb8c1f7204f"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-arm64.tar.gz"
+checksum = "sha256:4393edba64b8c874123b8fca85fa940cc5224a392650993e5e84909dfaf80f9f"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.8/pnpm-linux-arm64.tar.gz"
+provenance = "github-attestations"
 
 [tools.pnpm."platforms.linux-arm64-musl"]
-checksum = "sha256:4da815463a92e043b6a2ad928442ac0122a60e5127d6c9658dd79aceee6b5fef"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-arm64-musl.tar.gz"
+checksum = "sha256:3e2af32322c039b55c8eecae911fcd29febf2a4cbf50cfd4860770001131b232"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.8/pnpm-linux-arm64-musl.tar.gz"
+provenance = "github-attestations"
 
 [tools.pnpm."platforms.linux-x64"]
-checksum = "sha256:af148fa26d8bfc3b3e2bda40d96c79f0d449364cc7cc4530bfbb2fb2a23d983f"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-x64.tar.gz"
+checksum = "sha256:ac9fed9acf78cb9eacf3b6e7964e34dc196e93c2aad2ed3540fe5ef5c2effaeb"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.8/pnpm-linux-x64.tar.gz"
+provenance = "github-attestations"
 
 [tools.pnpm."platforms.linux-x64-musl"]
-checksum = "sha256:920c534067af813f638f4724e38c63fee411d71f5b43ba417c17e35598a94a68"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-x64-musl.tar.gz"
+checksum = "sha256:a5070cfda413b6fcda3a501fc6b0b1c57309ee590eadc8ba51f05e3a2b24195f"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.8/pnpm-linux-x64-musl.tar.gz"
+provenance = "github-attestations"
 
 [tools.pnpm."platforms.macos-arm64"]
-checksum = "sha256:e3114eaa5c5ac6bd80e6245781200486e4f2c0a938f382048dc026b5ba113ddc"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-darwin-arm64.tar.gz"
-
-[tools.pnpm."platforms.macos-x64"]
-checksum = "sha256:9bc026288b81982fb89fd565e13a2c2a3cc4bc9d669354d03450527f0a4b365d"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-darwin-x64.tar.gz"
+checksum = "sha256:d988a3824d9ffd6f74eb9d9d703d24b7a42630dacfa7de375b8becef0706295c"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.8/pnpm-darwin-arm64.tar.gz"
+provenance = "github-attestations"
 
 [tools.pnpm."platforms.windows-x64"]
-checksum = "sha256:9dacdc858b58a069112eb02e78947e45727bd61fdfb8c77fcc8c08d922de180a"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-win32-x64.zip"
+checksum = "sha256:19c4a2d675920adf02a6614c2055a44393a221c5ba914708489be396e1763bd1"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.8/pnpm-win32-x64.zip"
+provenance = "github-attestations"
 
 [[tools.resvg]]
 version = "0.47.0"
@@ -554,32 +561,32 @@ version = "1.95.0"
 backend = "core:rust"
 
 [[tools.rust-analyzer]]
-version = "2026-04-27"
+version = "2026-05-04"
 backend = "aqua:rust-lang/rust-analyzer"
 
 [tools.rust-analyzer."platforms.linux-arm64"]
-checksum = "sha256:41511c987480d47a67a35aff4e65e96d9027280850773d91087275b7dccd0deb"
-url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-04-27/rust-analyzer-aarch64-unknown-linux-gnu.gz"
+checksum = "sha256:eee311e65f5eefae9c7834c2e782c90557fee0883d3b9cc4f8fbcea5188240ec"
+url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-05-04/rust-analyzer-aarch64-unknown-linux-gnu.gz"
 
 [tools.rust-analyzer."platforms.linux-x64"]
-checksum = "sha256:3910147f7900f01e719e61af0c30e28cf38847ecfe2410f2566f18a007105921"
-url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-04-27/rust-analyzer-x86_64-unknown-linux-gnu.gz"
+checksum = "sha256:c292b81c42637cb4ec92d9e54e1c7da0a40a85ef5121dd602344d44ccd60f779"
+url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-05-04/rust-analyzer-x86_64-unknown-linux-gnu.gz"
 
 [tools.rust-analyzer."platforms.linux-x64-musl"]
-checksum = "sha256:3210272629f3bf5aa71e0e4eb47855284e1b100cc238c70446b3995a30d14433"
-url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-04-27/rust-analyzer-x86_64-unknown-linux-musl.gz"
+checksum = "sha256:9ca9e478cb79e231e9f0f62e9e495abd36acd917eff805e9fd8c502caf6973a1"
+url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-05-04/rust-analyzer-x86_64-unknown-linux-musl.gz"
 
 [tools.rust-analyzer."platforms.macos-arm64"]
-checksum = "sha256:12ed754ef392d652d6e4759d0567b2f1c8f7d509315d08977492d3eaf7635ee0"
-url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-04-27/rust-analyzer-aarch64-apple-darwin.gz"
+checksum = "sha256:7b3689e7fc10c245313e06e6384fd4d0d8f15e19824f55554875c2b51ef3b9cf"
+url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-05-04/rust-analyzer-aarch64-apple-darwin.gz"
 
 [tools.rust-analyzer."platforms.macos-x64"]
-checksum = "sha256:b34484fecd93b973f7f511eb57123bc5732dc68de3a864d5443b50c553331b0b"
-url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-04-27/rust-analyzer-x86_64-apple-darwin.gz"
+checksum = "sha256:a5e83889039974c9b10b97794e2dbb11613a60bb4610859925e232b2855bc86f"
+url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-05-04/rust-analyzer-x86_64-apple-darwin.gz"
 
 [tools.rust-analyzer."platforms.windows-x64"]
-checksum = "sha256:739f07575d5a2a96e3607db6d841d88101b28dbdbe8956357f4c730309a7f592"
-url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-04-27/rust-analyzer-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:a9703da68a13ca5a4fab7dbcd4d3cc868fad52725fa819b1b9f8d92a7196bc84"
+url = "https://github.com/rust-lang/rust-analyzer/releases/download/2026-05-04/rust-analyzer-x86_64-pc-windows-msvc.zip"
 
 [[tools.starship]]
 version = "1.25.1"
@@ -646,36 +653,36 @@ checksum = "sha256:0e4345ad1b9a69eb3c3c94a4d6bae80e9a57e27dbacd6a2ce51c64fde8334
 url = "https://github.com/Myriad-Dreamin/tinymist/releases/download/v0.14.16/tinymist-win32-x64.exe"
 
 [[tools.tombi]]
-version = "0.10.2"
+version = "0.11.0"
 backend = "aqua:tombi-toml/tombi"
 
 [tools.tombi."platforms.linux-arm64"]
-checksum = "sha256:9cb16ec45802bc84cb76bb955facb4f1c5de9bd36f349075765ed12d180ceccf"
-url = "https://github.com/tombi-toml/tombi/releases/download/v0.10.2/tombi-cli-0.10.2-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:aaf54d4615008e154d9136c19c3619b37f8818d74a4ba224a3b4fa21a2c7705d"
+url = "https://github.com/tombi-toml/tombi/releases/download/v0.11.0/tombi-cli-0.11.0-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.tombi."platforms.linux-arm64-musl"]
-checksum = "sha256:9cb16ec45802bc84cb76bb955facb4f1c5de9bd36f349075765ed12d180ceccf"
-url = "https://github.com/tombi-toml/tombi/releases/download/v0.10.2/tombi-cli-0.10.2-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:aaf54d4615008e154d9136c19c3619b37f8818d74a4ba224a3b4fa21a2c7705d"
+url = "https://github.com/tombi-toml/tombi/releases/download/v0.11.0/tombi-cli-0.11.0-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.tombi."platforms.linux-x64"]
-checksum = "sha256:c4268eaaea8a7eb23c8578b5d8976b2490e748670a3725db4f5e4352f9d3076c"
-url = "https://github.com/tombi-toml/tombi/releases/download/v0.10.2/tombi-cli-0.10.2-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:f56f17e1d762e0cd7e127823daf2778f25b68fdecfc7d7d628a6a0d10ef13a3e"
+url = "https://github.com/tombi-toml/tombi/releases/download/v0.11.0/tombi-cli-0.11.0-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.tombi."platforms.linux-x64-musl"]
-checksum = "sha256:c4268eaaea8a7eb23c8578b5d8976b2490e748670a3725db4f5e4352f9d3076c"
-url = "https://github.com/tombi-toml/tombi/releases/download/v0.10.2/tombi-cli-0.10.2-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:f56f17e1d762e0cd7e127823daf2778f25b68fdecfc7d7d628a6a0d10ef13a3e"
+url = "https://github.com/tombi-toml/tombi/releases/download/v0.11.0/tombi-cli-0.11.0-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.tombi."platforms.macos-arm64"]
-checksum = "sha256:e456b5518923f1c3b3b136aa92c57aa9ffc6f27d8ce155af337509d3f5a3a619"
-url = "https://github.com/tombi-toml/tombi/releases/download/v0.10.2/tombi-cli-0.10.2-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:87e8869b53b80d76153de661da717d963fc44803a34e21ff2eade7708f242933"
+url = "https://github.com/tombi-toml/tombi/releases/download/v0.11.0/tombi-cli-0.11.0-aarch64-apple-darwin.tar.gz"
 
 [tools.tombi."platforms.macos-x64"]
-checksum = "sha256:b3ed94dc4396f565728a7ccb08de466de13607b3f4e73741ab5a3d13571e46f7"
-url = "https://github.com/tombi-toml/tombi/releases/download/v0.10.2/tombi-cli-0.10.2-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:0e73dddbd8f92324f0aa6b3bf3878913c4021d9c6385ba60875cdbbcda8f109a"
+url = "https://github.com/tombi-toml/tombi/releases/download/v0.11.0/tombi-cli-0.11.0-x86_64-apple-darwin.tar.gz"
 
 [tools.tombi."platforms.windows-x64"]
-checksum = "sha256:8ecfb32d7fe90612a626a25500fa92a9b4e42dbad6a00f202849901a058dd6a7"
-url = "https://github.com/tombi-toml/tombi/releases/download/v0.10.2/tombi-cli-0.10.2-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:3f702350d274d63ae5bba0f8e62098e901c3013a5a2ad25a2d6a61fa01251ad9"
+url = "https://github.com/tombi-toml/tombi/releases/download/v0.11.0/tombi-cli-0.11.0-x86_64-pc-windows-msvc.zip"
 
 [[tools.typst]]
 version = "0.14.2"
@@ -742,33 +749,33 @@ checksum = "sha256:aa448c2704ca1a37ce0f1fc75381d9a411946dd293cf6236293f549426a57
 url = "https://github.com/watchexec/watchexec/releases/download/v2.5.1/watchexec-2.5.1-x86_64-pc-windows-msvc.zip"
 
 [[tools.yazi]]
-version = "26.1.22"
+version = "26.5.6"
 backend = "aqua:sxyazi/yazi"
 
 [tools.yazi."platforms.linux-arm64"]
-checksum = "sha256:91a37cdb3aa49f903aab6af57bca708935acb6def1d9f218716ab414f0a3a8b1"
-url = "https://github.com/sxyazi/yazi/releases/download/v26.1.22/yazi-aarch64-unknown-linux-musl.zip"
+checksum = "sha256:dff4a6774069bdde616c3cd145275b462a5887229cd9bf6341e78063da37e84f"
+url = "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-aarch64-unknown-linux-musl.zip"
 
 [tools.yazi."platforms.linux-arm64-musl"]
-checksum = "sha256:91a37cdb3aa49f903aab6af57bca708935acb6def1d9f218716ab414f0a3a8b1"
-url = "https://github.com/sxyazi/yazi/releases/download/v26.1.22/yazi-aarch64-unknown-linux-musl.zip"
+checksum = "sha256:dff4a6774069bdde616c3cd145275b462a5887229cd9bf6341e78063da37e84f"
+url = "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-aarch64-unknown-linux-musl.zip"
 
 [tools.yazi."platforms.linux-x64"]
-checksum = "sha256:b977351968206c0b78d2ef5bf21351685cc191b58a4c7e1c98c37db5d0a381f8"
-url = "https://github.com/sxyazi/yazi/releases/download/v26.1.22/yazi-x86_64-unknown-linux-musl.zip"
+checksum = "sha256:1031a02560d053301537195a6661d227c15cb4ce5c30481050b31e2b88681bff"
+url = "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-x86_64-unknown-linux-musl.zip"
 
 [tools.yazi."platforms.linux-x64-musl"]
-checksum = "sha256:b977351968206c0b78d2ef5bf21351685cc191b58a4c7e1c98c37db5d0a381f8"
-url = "https://github.com/sxyazi/yazi/releases/download/v26.1.22/yazi-x86_64-unknown-linux-musl.zip"
+checksum = "sha256:1031a02560d053301537195a6661d227c15cb4ce5c30481050b31e2b88681bff"
+url = "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-x86_64-unknown-linux-musl.zip"
 
 [tools.yazi."platforms.macos-arm64"]
-checksum = "sha256:8355ad582dd9f4ef1f88a228080f2b6116bbb483dd48d1bde555d475f4d2afe4"
-url = "https://github.com/sxyazi/yazi/releases/download/v26.1.22/yazi-aarch64-apple-darwin.zip"
+checksum = "sha256:7abd71725e2fe27bed036becbf6ce79fa17964eb68491d34190011c94b8c7ca8"
+url = "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-aarch64-apple-darwin.zip"
 
 [tools.yazi."platforms.macos-x64"]
-checksum = "sha256:1e097c015a968aba29bbc11bffdb99a7aedaf92c78df09d00613283dac0f148c"
-url = "https://github.com/sxyazi/yazi/releases/download/v26.1.22/yazi-x86_64-apple-darwin.zip"
+checksum = "sha256:6846066f992c1688d8ec77431a3ab53f5ef268019fcef86e5649b8c27010868d"
+url = "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-x86_64-apple-darwin.zip"
 
 [tools.yazi."platforms.windows-x64"]
-checksum = "sha256:7d6c8e3f596f99dd8f20fc7b806c9195c4746c2b7100d0e90a7ff80c259c899a"
-url = "https://github.com/sxyazi/yazi/releases/download/v26.1.22/yazi-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:6c6c52a4b2648e179f917bdaa7c57e793d18561b380a8bfa025f10cd1b9b2ad1"
+url = "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-x86_64-pc-windows-msvc.zip"
