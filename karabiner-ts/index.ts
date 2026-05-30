@@ -54,11 +54,13 @@ writeToProfile("karabiner-ts", [
         .to("left_command")
         .toIfAlone("japanese_eisuu"),
       // underbar
-      map("international3", "left_shift").to("international1"),
+      map("backslash", "left_shift").to("international1"),
       // backslach
-      map("international3")
+      map("backslash")
         .to("right_shift")
         .toIfAlone("international3"),
+      // accent grave
+      map("backslash", "left_option").to("international1", "left_option")
     ].map((rule) => rule.condition(ifDevice(CORNE_CHERRY))),
   ),
 

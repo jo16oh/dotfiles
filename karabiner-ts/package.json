@@ -4,9 +4,9 @@
     "build": "tsx index.ts"
   },
   "devDependencies": {
-    "@types/node": "^22.10.5",
-    "tsx": "^4.19.2",
-    "typescript": "^5.9.3",
-    "karabiner.ts": "^1.36.0"
+    "@types/node": "^24.12.2",
+    "karabiner.ts": "^1.36.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
   }
 }
