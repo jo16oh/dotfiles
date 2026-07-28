@@ -6,6 +6,7 @@ brew 'stow'
 brew 'mas'
 brew 'trash'
 brew 'smartmontools'
+brew 'poppler' # yazi の PDF プレビュー (pdftoppm)
 
 brew 'lima'
 brew 'colima', restart_service: true
@@ -14,8 +15,10 @@ brew 'docker-compose'
 brew 'docker-buildx'
 
 system 'mkdir -p ~/.docker/cli-plugins'
-system "ln -s -f #{brew_prefix}/bin/docker-cli-plugin-docker-compose ~/.docker/cli-plugins/docker-compose"
-system "ln -s -f #{brew_prefix}/bin/docker-cli-plugin-docker-buildx ~/.docker/cli-plugins/docker-buildx"
+# NOTE: Homebrew が docker-cli-plugin-* を廃止し素の名前に変えたため、
+#       旧パスを張ると dangling symlink になる
+system "ln -s -f #{brew_prefix}/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose"
+system "ln -s -f #{brew_prefix}/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx"
 
 # ruby build dependencies
 brew 'openssl@3'
