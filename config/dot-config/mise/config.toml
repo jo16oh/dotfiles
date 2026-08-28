@@ -23,6 +23,7 @@ claude-code = "latest"
 "tinymist" = "latest"
 "cargo:https://github.com/itsjunetime/tdf.git" = "rev:7b9e1462da6d75d65cd1a3f5f263fda1046bed7e" # v0.5.0
 go = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
 "go:github.com/mattn/efm-langserver" = "latest"
 ruby = "latest"
 "gem:ruby-lsp" = "latest"

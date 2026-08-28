@@ -247,6 +247,11 @@ roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 
 [[language]]
+name = "go"
+language-servers = ["scls", "gopls"]
+auto-format = true
+
+[[language]]
 name = "toml"
 language-servers = ["scls", "tombi"]
 auto-format = true
