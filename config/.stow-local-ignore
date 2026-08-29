@@ -1,0 +1,31 @@
+# Comments and blank lines are allowed.
+#
+# This file OVERRIDES stow's built-in default ignore list (it does not
+# merge with it), so the defaults are reproduced here verbatim and our
+# additions are appended at the bottom.
+# Default list source: `stow` package's Stow.pm __DATA__ section.
+
+RCS
+.+,v
+
+CVS
+\.\#.+       # CVS conflict files / emacs lock files
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# Local additions
+\.DS_Store
