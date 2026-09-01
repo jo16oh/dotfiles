@@ -1,5 +1,5 @@
 {
-  "model": "sonnet",
+  "model": "opus",
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
@@ -13,5 +13,8 @@
   "awaySummaryEnabled": false,
   "tui": "fullscreen",
   "preferredNotifChannel": "ghostty",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "attribution": {
+    "sessionUrl": false
+  }
 }
