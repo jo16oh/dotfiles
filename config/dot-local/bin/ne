@@ -29,6 +29,8 @@ if [ -z "$command" ]; then
 fi
 
 current_dir="$(pwd)"
+project_root=""
+pm=""
 
 while [ "$current_dir" != "/" ]; do
     # Check for Deno project
@@ -38,22 +40,56 @@ while [ "$current_dir" != "/" ]; do
         exit 1
     # Check for pnpm
     elif [ -f "$current_dir/pnpm-lock.yaml" ]; then
-        exec pnpm $pm_opts exec -- $command $cmd_args
+        project_root="$current_dir"
+        pm="pnpm"
+        break
     # Check for bun
     elif [ -f "$current_dir/bun.lockb" ] || [ -f "$current_dir/bun.lock" ]; then
-        exec bun $pm_opts x --no-install -- $command $cmd_args
+        project_root="$current_dir"
+        pm="bun"
+        break
     # Check for yarn
     elif [ -f "$current_dir/yarn.lock" ]; then
-        exec yarn $pm_opts exec -- $command $cmd_args
+        project_root="$current_dir"
+        pm="yarn"
+        break
     # Check for npm
     elif [ -f "$current_dir/package-lock.json" ]; then
-        exec npm $pm_opts exec --no-install -- $command $cmd_args
+        project_root="$current_dir"
+        pm="npm"
+        break
     fi
 
     current_dir="$(dirname "$current_dir")"
 done
 
-# No lock file found
-echo "Error: No package manager lock file found." >&2
-echo "Supported files: pnpm-lock.yaml, bun.lockb, bun.lock, yarn.lock, package-lock.json" >&2
-exit 1
+if [ -z "$pm" ]; then
+    echo "Error: No package manager lock file found." >&2
+    echo "Supported files: pnpm-lock.yaml, bun.lockb, bun.lock, yarn.lock, package-lock.json" >&2
+    exit 1
+fi
+
+# Skip the package manager CLI's own startup/resolution cost (pnpm exec in
+# particular) by execing a locally-hoisted node_modules/.bin/<command> shim
+# directly when one exists, walking up from cwd to the project root. Only
+# safe when no pm-specific options were given, since those are meaningful to
+# the pm's exec subcommand but not to the shim itself.
+if [ -z "$pm_opts" ]; then
+    search_dir="$(pwd)"
+    while :; do
+        if [ -x "$search_dir/node_modules/.bin/$command" ]; then
+            exec "$search_dir/node_modules/.bin/$command" $cmd_args
+        fi
+        [ "$search_dir" = "$project_root" ] && break
+        parent="$(dirname "$search_dir")"
+        [ "$parent" = "$search_dir" ] && break
+        search_dir="$parent"
+    done
+fi
+
+case "$pm" in
+    pnpm) exec pnpm $pm_opts exec -- $command $cmd_args ;;
+    bun) exec bun $pm_opts x --no-install -- $command $cmd_args ;;
+    yarn) exec yarn $pm_opts exec -- $command $cmd_args ;;
+    npm) exec npm $pm_opts exec --no-install -- $command $cmd_args ;;
+esac

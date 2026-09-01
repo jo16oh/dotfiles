@@ -25,12 +25,21 @@ tools:
     require-marker: true
 
   oxfmt: &oxfmt
-    format-command: 'ne oxfmt --stdin-filepath ${INPUT}'
+    format-command: |
+      [ -f .oxfmtrc.json ] || [ -f .oxfmtrc.jsonc ] || [ -f oxfmt.config.ts ] && exec ne oxfmt --stdin-filepath ${INPUT}
+      [ -f biome.json ] || [ -f biome.jsonc ] || [ -f eslint.config.js ] || [ -f eslint.config.mjs ] || [ -f eslint.config.cjs ] || [ -f eslint.config.ts ] || [ -f .eslintrc ] || [ -f .eslintrc.json ] || [ -f .eslintrc.js ] || [ -f .eslintrc.cjs ] || [ -f .eslintrc.yaml ] || [ -f .eslintrc.yml ] && { cat; exit 0; }
+      [ -f package.json ] && jq -e '.dependencies["vite-plus"] // .devDependencies["vite-plus"] // empty' package.json >/dev/null 2>&1 && exec ne oxfmt --stdin-filepath ${INPUT}
+      cat
     format-stdin: true
     root-markers:
       - .oxfmtrc.json
       - .oxfmtrc.jsonc
       - oxfmt.config.ts
+      - vite.config.ts
+      - vite.config.js
+      - vite.config.mts
+      - vite.config.mjs
+      - vite.config.cjs
     require-marker: true
 
 languages:

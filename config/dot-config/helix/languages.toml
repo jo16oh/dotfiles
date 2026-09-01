@@ -45,12 +45,22 @@ args = ["--stdio"]
 required-root-patterns = ["eslint.config.*", ".eslintrc*"]
 
 [language-server.oxlint]
-command = "ne"
-args = ["oxlint", "--lsp"]
+command = "sh"
+args = ["-c", '''
+[ -f .oxlintrc.json ] || [ -f .oxlintrc.jsonc ] || [ -f oxlint.config.ts ] && exec ne oxlint --lsp
+[ -f biome.json ] || [ -f biome.jsonc ] || [ -f eslint.config.js ] || [ -f eslint.config.mjs ] || [ -f eslint.config.cjs ] || [ -f eslint.config.ts ] || [ -f .eslintrc ] || [ -f .eslintrc.json ] || [ -f .eslintrc.js ] || [ -f .eslintrc.cjs ] || [ -f .eslintrc.yaml ] || [ -f .eslintrc.yml ] && exit 1
+[ -f package.json ] && jq -e '.dependencies["vite-plus"] // .devDependencies["vite-plus"] // empty' package.json >/dev/null 2>&1 && exec ne oxlint --lsp
+exit 1
+''']
 required-root-patterns = [
   ".oxlintrc.json",
   ".oxlintrc.jsonc",
-  "oxlint.config.ts"
+  "oxlint.config.ts",
+  "vite.config.ts",
+  "vite.config.js",
+  "vite.config.mts",
+  "vite.config.mjs",
+  "vite.config.cjs"
 ]
 
 [language-server.stylelint]
