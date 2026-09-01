@@ -1,6 +1,17 @@
 {
+  "model": "sonnet",
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
-  }
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true
+  },
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "awaySummaryEnabled": false,
+  "tui": "fullscreen",
+  "preferredNotifChannel": "ghostty",
+  "agentPushNotifEnabled": true
 }
