@@ -79,5 +79,3 @@ languages:
     - <<: *oxfmt
   yaml:
     - <<: *oxfmt
-  markdown:
-    - <<: *oxfmt
